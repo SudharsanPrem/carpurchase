@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REISTRATION</title>
+    <script>    
+        function validate() {    
+            var fname = document.reg_form.fname;    
+            var lname = document.reg_form.lname;    
+            var address = document.reg_form.address;    
+            var gender = document.reg_form.gender;    
+            var email = document.reg_form.email;    
+            var mobile = document.reg_form.mobile;    
+            var course = document.reg_form.course;    
+    
+            if (fname.value.length <= 0) {    
+                alert("Name is required");    
+                fname.focus();    
+                return false;    
+            }    
+            if (lname.value.length <= 0) {  
+                alert("Last Name is required");    
+                lname.focus();    
+                return false;    
+            }    
+            if (address.value.length <= 0) {    
+                alert("Address is required");    
+                address.focus();    
+                return false;    
+            }    
+            if (gender.value.length <= 0) {    
+                alert("Gender is required");    
+                gender.focus();    
+                return false;    
+            }    
+            if (email.value.length <= 0) {    
+                alert("Email Id is required");    
+                email.focus();    
+                return false;    
+            }    
+            if (mobile.value.length <= 0) {    
+                alert("Mobile number is required");    
+                mobile.focus();    
+                return false;    
+            }    
+            if (course.value == "select course") {    
+                alert("Course is required");    
+                course.focus();    
+                return false;    
+            }    
+            return false;    
+        }    
+    </script>    
+</head>
+<body>
+    <body style="background-image: url(fordregis.jpg);background-size:cover">
+     <nav style="text-align-last: right; color:aliceblue"><a href="pay.html">PAYMENT PAGE</a></nav>
+    <center><h1 style="color:white">OWN YOYR OWN MUSTANG</h1></center>    
+    <hr>    
+    <form method="" action="" name="reg_form" onsubmit= "return validate()">    
+        <h3 style="color:aliceblue">CAR REGISTRATION FORM</h3>    
+        <table>    
+            <tr>    
+                <td><label>FIRST NAME: </label></td>    
+                <td>    
+                    <input type="text" name="fname" placeholder="First Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>LAST NAME: </label></td>    
+                <td>    
+                    <input type="text" name="lname" placeholder="Last Name">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>ADDRESS: </label></td>    
+                <td>    
+                    <input type="textarea" size="50" name="address" placeholder="Address">    
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>CAR TYPE: </label></td>    
+                <td>    
+                    <input type="radio" name="gender" value="male">MUSTANG    
+                    <input type="radio" name="gender" value="femele">SHELBY MUSTANG   
+                </td>    
+            </tr>    
+            <tr>    
+                <td><label>EMAIL: </label></td>    
+                <td>    
+                    <input type="text" name="email" placeholder="example@gmail.com">    
+                </td>    
+            </tr>    
+       
+            <tr>    
+            <td><label>MODEL: </label></td>    
+                <td>    
+                    <select name="course">    
+                        <option value="select course">select model</option>    
+                        <option value="mba">EcoBoost</option>    
+                        <option value="mca">Mach</option>    
+                        <option value="cs">GT</option>    
+                        <option value="ece">Shelby GT500</option>    
+                    </select>    
+                </td>    
+            </tr>   
+            
+            <tr>    
+                <td><label>COLOR: </label></td>    
+                    <td>    
+                        <select name="COLLEGE">    
+                            <option value="select College">select color</option>    
+                            <option value="au">black</option>    
+                            <option value="mu">white</option>    
+                            <option value="bu">red</option>    
+                            <option value="bdu">blue</option>    
+                        </select>    
+                    </td>    
+                </tr> 
+            <tr>    
+                <td>    
+                    <input type="submit" name="submit" value="REGISTER">
+                    <button>
+                    <a href="pay.html">SUBMIT</a>
+                    </button>
+                </td>  
+                <td>
+<!--                    <input type="reset" name="reset" value="CLEAR">  -->
+                    <button>
+                    <a>CLEAR</a>
+                    </button>
+                </td>  
+            </tr>             
+        </table>
+    </form> 
+</body>
+</html>     
